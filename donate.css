@@ -1034,8 +1034,8 @@ details p {
 
 /* ---------- Адаптив ---------- */
 
-@media (max-width: 1240px) and (min-width: 1021px) {
-  .volt { right: -24px; }
+@media (max-width: 1180px) {
+  .volt { display: none; }
 }
 
 @media (max-width: 1020px) {
