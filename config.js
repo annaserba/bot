@@ -3,6 +3,9 @@ window.DONATE_CONFIG = {
   /* Бот */
   botUrl: 'https://max.ru/se14972607_bot',
 
+  /* Страница дома. После DNS: https://por48.annaserba.ru/ */
+  houseUrl: 'https://annaserba.ru/por48/',
+
   /* Ссылка на оплату от самозанятой (Т-Банк, Сбер, ЮKassa и т. п.).
      Пока пусто — кнопки ведут в Telegram, и ссылка приходит вручную.
      Вставьте ссылку — кнопки сразу переключатся на оплату. */

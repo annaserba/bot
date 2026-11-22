@@ -124,9 +124,12 @@
 
     var hint = $('[data-pay-hint]');
     if (hint) {
+      var passesAmount = !!C.amountParam || (C.paymentUrl || '').indexOf('{amount}') !== -1;
       hint.textContent = fallback
         ? 'Откроется Telegram — пришлю ссылку на оплату и чек.'
-        : 'Откроется Т-Банк. Сумму укажете на странице оплаты.';
+        : passesAmount
+          ? 'Откроется страница оплаты. Сумма уже выбрана — ' + money(amount) + ' ₽.'
+          : 'Откроется Т-Банк. Введите ' + money(amount) + ' ₽ на странице оплаты.';
     }
   }
 
@@ -181,6 +184,11 @@
     link.target = '_blank';
     link.rel = 'noopener';
     link.addEventListener('click', function () { track('donate_bot'); });
+  });
+
+  var houseUrl = C.houseUrl || 'https://annaserba.ru/por48/';
+  $$('[data-house]').forEach(function (link) {
+    link.href = houseUrl;
   });
 
   var tgUrl = C.telegram || 'https://t.me/annserba94';

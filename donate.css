@@ -614,6 +614,35 @@ h2 {
 .strip__link { flex: 0 0 auto; font-size: 14px; font-weight: 650; color: #9fc4ff; }
 .strip__link:hover { color: #fff; }
 
+.house-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background:
+    radial-gradient(420px 200px at 0% 0%, rgba(20, 108, 71, .18), transparent 70%),
+    rgba(255, 255, 255, .025);
+}
+.house-banner__ico {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(91, 228, 154, .22);
+  border-radius: 12px;
+  background: rgba(20, 108, 71, .2);
+  color: #7ee2a8;
+}
+.house-banner__ico svg { width: 21px; height: 21px; }
+.house-banner__text { display: flex; flex-direction: column; min-width: 0; }
+.house-banner__text b { color: #fff; font-size: 14.5px; font-weight: 650; }
+.house-banner__text span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+.house-banner .btn { flex: 0 0 auto; margin-left: auto; }
+
 /* Зачем донат */
 .section--note {
   background: var(--bg-soft);
@@ -1080,6 +1109,8 @@ details p {
   .brand__img { width: 34px; height: 34px; }
   .top .btn--ghost { padding: 8px 12px; font-size: 12.5px; }
   .strip { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .house-banner { flex-wrap: wrap; padding: 16px; }
+  .house-banner .btn { width: 100%; margin-left: 0; }
   .progress { padding: 22px 20px 24px; }
   .progress__head { flex-direction: column; align-items: flex-start; gap: 12px; }
   .progress__side { width: 100%; justify-content: space-between; }
